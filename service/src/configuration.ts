@@ -7,11 +7,13 @@ import { DefaultErrorFilter } from './filter/default.filter';
 import { NotFoundFilter } from './filter/notfound.filter';
 // import { ReportMiddleware } from './middleware/report.middleware';
 import { FormatMiddleware } from './middleware/formatResponse';
+import * as orm from '@midwayjs/typeorm';
 
 @Configuration({
   imports: [
     koa,
     validate,
+    orm,
     {
       component: info,
       enabledEnvironment: ['local'],
