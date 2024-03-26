@@ -14,12 +14,12 @@ export default {
          * 单数据库实例
          */
         type: 'postgres',
-        host: '*******',
-        port: 3306,
-        username: '*******',
-        password: '*******',
-        database: undefined,
-        synchronize: false,     // 如果第一次使用，不存在表，有同步的需求可以写 true，注意会丢数据
+        host: 'localhost',
+        port: 5432,
+        username: 'xiaofeng',
+        password: '',
+        database: 'aurora-note-dev',
+        synchronize: true,     // 如果第一次使用，不存在表，有同步的需求可以写 true，注意会丢数据
         logging: false,
         // 配置实体模型
         entities: [Photo],
