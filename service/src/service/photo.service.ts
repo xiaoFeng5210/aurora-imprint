@@ -9,6 +9,10 @@ export class PhotoService {
   @InjectEntityModel(Photo)
 	photoModel: Repository<Photo>;
 	
+	async getPhotos() {
+		return await this.photoModel.find();
+	}
+	
 	async savePhoto(photo: Omit<Photo, 'id'>) {
 		return await this.photoModel.save(photo);
 	}

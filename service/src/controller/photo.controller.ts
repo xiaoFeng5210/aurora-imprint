@@ -3,15 +3,20 @@ import {PhotoService} from "../service/photo.service";
 import {Context} from "@midwayjs/koa";
 import {Photo} from "../entity/photo.entity";
 
-@Controller('/api')
+@Controller('/photo')
 export class HomeController {
 	@Inject()
 	ctx: Context;
 	
 	@Inject()
 	photoService: PhotoService;
-		
-	@Get('/get_photo')
+	
+	@Get('/all')
+	async getAllPhotos(): Promise<Photo[]> {
+		return await this.photoService.getPhotos();
+	}
+	
+	@Get('/')
 	async getPhoto(): Promise<Photo> {
 		const photo = {
 			name: 'xiaofeng',
