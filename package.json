@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@midwayjs/validate": "3"
+	}
+}
