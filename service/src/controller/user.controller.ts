@@ -13,7 +13,7 @@ export class PhotoService {
 	
   @Post('/create')
 	async create(@Body() user: IUserOptions) {
-		return user;
+		
   }
 	
 }
