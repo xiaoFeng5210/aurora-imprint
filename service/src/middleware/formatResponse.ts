@@ -17,7 +17,7 @@ export class FormatMiddleware implements IMiddleware<Context, NextFunction> {
       if (result) {
         return {
           code: 0,
-          message: 'OK',
+          message: 'success',
           data: result,
         }
       }
