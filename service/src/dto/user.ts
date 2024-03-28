@@ -2,8 +2,6 @@
 import { Rule, RuleType } from '@midwayjs/validate';
 
 export class UserDTO {
-	@Rule(RuleType.number().required())
-	uid: number;
 
 	@Rule(RuleType.string().required().max(100))
 	name: string;
