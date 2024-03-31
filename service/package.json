@@ -38,7 +38,7 @@
     "lint": "mwts check",
     "lint:fix": "mwts fix",
     "ci": "npm run cov",
-    "build": "mwtsc --cleanOutDir"
+    "build": "mwtsc --cleanOutDir",
   },
   "midway-bin-clean": [
     ".vscode/.tsbuildinfo",
@@ -47,6 +47,9 @@
   "repository": {
     "type": "git",
     "url": ""
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "author": "anonymous",
   "license": "MIT"
