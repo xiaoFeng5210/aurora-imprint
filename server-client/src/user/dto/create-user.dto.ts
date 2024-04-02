@@ -15,5 +15,4 @@ export class CreateUserDto {
 	remark: string
 
 	avatar?: string
-	
 }
