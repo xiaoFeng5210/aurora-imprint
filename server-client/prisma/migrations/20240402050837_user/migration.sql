@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "User" ALTER COLUMN "remark" SET DEFAULT '',
+ALTER COLUMN "avatar" SET DEFAULT '';

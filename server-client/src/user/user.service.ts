@@ -11,10 +11,10 @@ export class UserService {
   create(createUserDto: CreateUserDto) {
     const uid = nanoid()
     const data = {
+      uid,
       ...createUserDto,
-      uid
     }
-    return this.prisma.user.create(data)
+    return this.prisma.user.create({data})
   }
 
   findAll() {
