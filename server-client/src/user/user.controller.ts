@@ -3,7 +3,7 @@ import {UserService} from './user.service';
 import {CreateUserDto} from './dto/create-user.dto';
 import {UpdateUserDto} from './dto/update-user.dto';
 
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
   
@@ -13,13 +13,7 @@ export class UserController {
   }
   
   @Get()
-  @Version('1')
-  findAll2() {
-    return 'test v1 version';
-  }
-
-  @Get()
-  @Version([VERSION_NEUTRAL])
+  // @Version([VERSION_NEUTRAL])
   findAll() {
     return this.userService.findAll();
   }
