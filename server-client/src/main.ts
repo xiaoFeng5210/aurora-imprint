@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import {VERSION_NEUTRAL, VersioningType} from '@nestjs/common';
+import {VERSION_NEUTRAL, VersioningType, ValidationPipe} from '@nestjs/common';
 import { AppModule } from './app.module';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 import {
@@ -22,6 +22,7 @@ async function bootstrap() {
   });
   app.useGlobalInterceptors(new TransformInterceptor());
   app.useGlobalFilters(new AllExceptionsFilter(), new HttpExceptionFilter());
+  app.useGlobalPipes(new ValidationPipe());
   await app.listen(7001);
 }
 bootstrap();
