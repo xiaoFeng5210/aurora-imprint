@@ -14,12 +14,12 @@ const Home: FC = () => {
   return (
     <div className='tw-w-screen tw-h-dvh tw-overflow-hidden tw-flex tw-flex-row'>
       <SlideBar />
-      <main className="tw-flex-1">  
+      <motion.main layout transition={{duration: 0.5}} className="tw-flex-1">  
         <Nav />
         <motion.div layout className='tw-p-4 tw-w-full tw-h-full'>
           <Outlet />
         </motion.div>
-      </main>
+      </motion.main>
 
     </div>
   )

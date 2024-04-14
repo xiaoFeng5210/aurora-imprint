@@ -18,3 +18,6 @@ export const setIsShowSlideBar = (isShow: boolean) => {
   useSlideBarStore.setState({ isShowSlideBar: isShow })
 }
 
+export const toggleSlideBar = () => {
+  useSlideBarStore.setState((state) => ({ isShowSlideBar: !state.isShowSlideBar }))
+}

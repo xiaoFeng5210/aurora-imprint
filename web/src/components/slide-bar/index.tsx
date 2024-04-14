@@ -1,7 +1,6 @@
 import { useState, type FC } from 'react'
 import { SlideBarItem, selectedStyle, SlideBarWrapper } from './styled'
 import { useSlideBarStore, setCurrentSelectKey, setIsShowSlideBar } from '../../store'
-import { Skeleton } from "@/components/ui/skeleton"
 import { mockData } from './mock.ts'
 import { motion, AnimatePresence } from "framer-motion"
 import { variants, itemVariants, logoVariants, foldVariants, ComponentVariants } from './animate.tsx'
