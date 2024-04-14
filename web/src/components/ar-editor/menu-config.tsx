@@ -1,4 +1,5 @@
 import {useCurrentEditor} from "@tiptap/react";
+import './style.scss'
 
 export const MenuBar = () => {
 	const { editor } = useCurrentEditor()
