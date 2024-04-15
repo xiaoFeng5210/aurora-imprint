@@ -4,10 +4,8 @@ import { extensions } from './editor-config'
 import {MenuBar} from './menu-config'
 
 const content = `
-
 	<h2>Getting Started</h2>
 	<p>Let's write some code!</p>
-	
 `
 
 export default () => {
