@@ -12,7 +12,7 @@ export class UserService {
     const uid = nanoid()
     const data = {
       uid,
-      ...createUserDto,
+      ...createUserDto, 
     }
     return this.prisma.user.create({data})
   }

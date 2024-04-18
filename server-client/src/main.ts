@@ -6,7 +6,7 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
-import {AllExceptionsFilter} from "./common/exceptions/base.exception.filter";
+// import {AllExceptionsFilter} from "./common/exceptions/base.exception.filter";
 import {HttpExceptionFilter} from "./common/exceptions/http.exception.filter";
 
 async function bootstrap() {
@@ -21,7 +21,7 @@ async function bootstrap() {
     type: VersioningType.URI,
   });
   app.useGlobalInterceptors(new TransformInterceptor());
-  app.useGlobalFilters(new AllExceptionsFilter(), new HttpExceptionFilter());
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(7001);
 }
