@@ -10,7 +10,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
 		response
 			.status(status)
-			.send({
+			.join({
 				statusCode: status,
 				message: exception.message,
 				timestamp: new Date().toISOString(),

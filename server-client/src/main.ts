@@ -2,17 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import {VERSION_NEUTRAL, VersioningType, ValidationPipe} from '@nestjs/common';
 import { AppModule } from './app.module';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
 // import {AllExceptionsFilter} from "./common/exceptions/base.exception.filter";
 import {HttpExceptionFilter} from "./common/exceptions/http.exception.filter";
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestFastifyApplication>(
+  const app = await NestFactory.create(
     AppModule,
-    new FastifyAdapter(),
   );
   // 接口版本化管理
   app.enableVersioning({
