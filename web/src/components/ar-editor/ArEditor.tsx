@@ -1,7 +1,7 @@
-import './style.scss'
 import { EditorProvider} from '@tiptap/react'
 import { extensions } from './editor-config'
 import {MenuBar} from './menu-config'
+import './style.scss'
 
 const content = `
 	<h2>Getting Started</h2>

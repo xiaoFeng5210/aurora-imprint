@@ -30,7 +30,7 @@ const SlideBar: FC<SlideBarProps> = () => {
               onMouseLeave={() => setIsShowLeftToLine(false)}
               className='tw-py-2 tw-w-full tw-inline-flex tw-items-center tw-cursor-pointer'>
               <motion.img variants={logoVariants} whileHover="hover" whileTap="tap" src="/img/aurora_logo_main.png" alt="" width="50px" />
-              <span className='tw-ml-2 tw-text-[1.3rem] tw-font-bold'
+              <span className='tw-ml-2 tw-text-[1.3rem] tw-font-bold font-extrabold tw-leading-normal'
                 style={{ color: isShowLeftToLine ? '#747BFF' : '#6B6A66' }}>Aurora Note</span>
               {
                 isShowLeftToLine && (
