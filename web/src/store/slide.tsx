@@ -7,7 +7,7 @@ interface SlideBarState {
 
 export const useSlideBarStore = create<SlideBarState>(() => ({
   currentSelectKey: '',
-  isShowSlideBar: true
+  isShowSlideBar: false
 }))
 
 export const setCurrentSelectKey = (key: string) => {

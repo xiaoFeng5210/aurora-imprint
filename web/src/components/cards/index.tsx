@@ -51,10 +51,6 @@ const Cards: FC = () => {
                   <CardContent>
                     <p>content...</p>
                   </CardContent>
-                  {/* <CardFooter className="tw-flex tw-justify-between tw-items-center">
-                    <Button variant="outline">Cancel</Button>
-                    <Button>Deploy</Button>
-                  </CardFooter> */}
                 </Card>
               ))
             }

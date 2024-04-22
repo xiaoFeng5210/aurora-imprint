@@ -20,7 +20,6 @@ const Home: FC = () => {
           <Outlet />
         </motion.div>
       </motion.main>
-
     </div>
   )
 }
