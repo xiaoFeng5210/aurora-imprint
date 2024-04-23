@@ -1,43 +1,31 @@
 version: '3.8'
 services:
-  nest-api:
-    container_name: nest-note-api
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    depends_on:
-      - postgres
-    env_file:
-      - .env
-
-  postgres:
-    image: postgres:14
-    container_name: postgres-note
+  db:
     restart: always
+    image: postgres:14-alpine
+    user: postgres
+    container_name: postgres-note
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: f85859852
+      POSTGRES_DB: aurora_note
     ports:
       - '5432:5432'
-    env_file:
-      - .env
     volumes:
-      - postgres:/var/lib/postgresql/data
-
-  nginx:
-    image: nginx:stable-alpine      # 指定服务镜像
-    container_name: nginx    # 容器名称
-    restart: always                 # 重启方式
-    ports:                          # 映射端口
-      - "80:80"
-      - "443:443"
-    volumes:                        # 挂载数据卷
-      - /etc/localtime:/etc/localtime
-      - /home/ubuntu/work/nginx/conf.d:/etc/nginx/conf.d
-      - /home/ubuntu/work/nginx/logs:/var/log/nginx
-      - /home/ubuntu/work/nginx/cert:/etc/nginx/cert
-    depends_on:                     # 启动顺序
-      - nest-api
-
+      - data:/var/lib/postgres/main-data
+  testdb:
+    image: postgres:14-alpine
+    user: postgres
+    container_name: postgres-note-test
+    volumes:
+      - data:/var/lib/postgres/test-data
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: f85859852
+      POSTGRES_DB: aurora_note_test
+    ports:
+      - 5480:5432
+  
 volumes:
-  postgres:
-    name: nest-db
+  data:
+    driver: local      
