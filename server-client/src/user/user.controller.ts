@@ -2,6 +2,7 @@ import {Body, Controller, Delete, Get, Param, Patch, Post, Version, VERSION_NEUT
 import {UserService} from './user.service';
 import {CreateUserDto} from './dto/create-user.dto';
 import {UpdateUserDto} from './dto/update-user.dto';
+import {LoginDto} from './dto/login-user.dto';
 
 @Controller('users')
 export class UserController {
@@ -9,11 +10,11 @@ export class UserController {
 
   /**
    * jwt登陆
-   * @param createUserDto
+   * @param loginUserDto
    */
   @Post('login')
-  loginUser(@Body() createUserDto: CreateUserDto) {
-    console.log(createUserDto)
+  loginUser(@Body() loginUserDto: LoginDto) {
+    console.log(loginUserDto)
   }
   
   @Post()
