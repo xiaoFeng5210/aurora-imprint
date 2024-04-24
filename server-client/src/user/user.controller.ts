@@ -14,7 +14,7 @@ export class UserController {
    */
   @Post('login')
   loginUser(@Body() loginUserDto: LoginDto) {
-    console.log(loginUserDto)
+    
   }
   
   @Post()
