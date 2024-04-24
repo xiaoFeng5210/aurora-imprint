@@ -6,6 +6,15 @@ import {UpdateUserDto} from './dto/update-user.dto';
 @Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
+
+  /**
+   * jwt登陆
+   * @param createUserDto
+   */
+  @Post('login')
+  loginUser(@Body() createUserDto: CreateUserDto) {
+    console.log(createUserDto)
+  }
   
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
