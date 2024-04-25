@@ -9,6 +9,7 @@ import {LoginMiddleware} from "../common/middleware/login.middleware";
   controllers: [UserController],
   providers: [UserService, PrismaService],
   imports: [PrismaModule],
+  exports: [UserService]
 })
 export class UserModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
