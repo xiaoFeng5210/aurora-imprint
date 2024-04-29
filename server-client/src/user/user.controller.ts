@@ -7,15 +7,6 @@ import {LoginDto} from './dto/login-user.dto';
 @Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
-
-  /**
-   * jwt登陆
-   * @param loginUserDto
-   */
-  @Post('login')
-  loginUser(@Body() loginUserDto: LoginDto) {
-    
-  }
   
   @Post()
   create(@Body() createUserDto: CreateUserDto) {

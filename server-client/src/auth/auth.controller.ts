@@ -6,10 +6,10 @@ import {SignInDto} from "./dto/signIn.dto";
 export class AuthController {
 	constructor(private authService: AuthService) {}
 
-  // @HttpCode(HttpStatus.OK)
-  // @Post('login')
-  // signIn(@Body signInDto: SignInDto) {
-	//   console.log(signInDto)
-  // }
+  @HttpCode(HttpStatus.OK)
+  @Post('login')
+  signIn(@Body() signInDto: SignInDto) {
+		return this.authService.signIn(signInDto.user_name, signInDto.password);
+  }
 	
 }
