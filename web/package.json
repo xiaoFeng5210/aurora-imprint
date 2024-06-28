@@ -17,8 +17,10 @@
     "@tiptap/pm": "^2.2.4",
     "@tiptap/react": "^2.2.4",
     "@tiptap/starter-kit": "^2.2.4",
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.11.17",
     "@types/tinymce": "^4.6.9",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.5",
@@ -31,6 +33,7 @@
     "react-router-dom": "^6.22.0",
     "sort-by": "^1.2.0",
     "styled-components": "^6.1.8",
+    "swr": "^2.2.5",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.1"

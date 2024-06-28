@@ -8,6 +8,9 @@ import {HttpExceptionFilter} from "./common/exceptions/http.exception.filter";
 async function bootstrap() {
   const app = await NestFactory.create(
     AppModule,
+    {
+      logger: ['error', 'warn', 'log', 'debug', 'verbose'],
+    }
   );
   // 接口版本化管理
   app.enableVersioning({

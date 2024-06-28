@@ -40,7 +40,7 @@ const Cards: FC = () => {
         !hasCards ?
           <Tips />
           :
-          <CardsContainer as={motion.div} variants={cardVariants} initial="hidden" animate="visible" exit="hidden" >
+          <CardsContainer as={motion.div} variants={cardVariants} initial="hidden" animate="visible" exit="hidden">
             {
               Array(8).fill(1).map((_, index) => (
                 <Card className='tw-cursor-pointer tw-max-w-[620px] tw-min-w-[320px] tw-w-full' key={index}>
